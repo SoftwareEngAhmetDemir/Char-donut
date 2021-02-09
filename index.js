@@ -41,7 +41,7 @@ arcs
   .select('#textbox').text(color(4-i.index)).
   style('position','absolute')
   .style('margin-left',dx+'px')
-  .style('top',dy+'px');
+  .style('top',dy+'px').style('display','block');
    
     
   }).transition()
