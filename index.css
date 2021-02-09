@@ -1,3 +1,7 @@
+#container{
+    display: flex;
+    justify-content: center;
+}
 #textbox{
     border: 1px solid rgba(0, 0, 255, 0.808);
     background-color: blueviolet;

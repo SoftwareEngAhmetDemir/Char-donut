@@ -5,11 +5,12 @@ var color = d3
   .scaleOrdinal()
   .range(["red", "blue", "orange", "yellow", "green"]);
 var canvas = d3
-  .select("body")
+  .select("#container")
   .append("svg")
   .attr("width", 500)
-  .attr("height", 500);
+  .attr("height", 500)
 
+  
 var group = canvas.append("g").attr("transform", "translate(300,300)");
 
 var arc = d3.arc().innerRadius(200).outerRadius(r);
@@ -18,7 +19,7 @@ var pie = d3.pie().value(function (d) {
   return d;
 });
 
-console.log(pie(data));
+// console.log(pie(data));
 let dp = pie(data).sort()
 var arcs = group
   .selectAll(".arc")
@@ -26,6 +27,9 @@ var arcs = group
   .enter()
   .append("g")
   .attr("class", "arc");
+
+
+
 
 arcs
   .append("path")
