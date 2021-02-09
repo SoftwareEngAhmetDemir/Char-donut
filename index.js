@@ -32,16 +32,26 @@ arcs
   .attr("d", arc)
 
   .attr("fill", function (d, i) {
-    // console.log(d.data)
-    // console.log(d);
-    // console.log(i);
-    // console.log(color(i));
+   
     return color(i);
+  }).on("mouseover", function (d, i) {
+    let dx  = d.clientX;
+    let dy = d.pageY;
+  d3
+  .select('#textbox').text(color(4-i.index)).
+  style('position','absolute')
+  .style('margin-left',dx+'px')
+  .style('top',dy+'px');
+   
+    
+  }).transition()
+  .duration(function(d, i) {
+    return 2000;
   })
-  .on("mouseover", function (d, i) {
-    // console.log(i.index);
+      .attrTween('d', function(d) {
+ var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+ return function(t) {
+     d.endAngle = i(t);
+   return arc(d);
+ }})
   
-    console.log(color(4-i.index));
-    // console.log(color(0));
-    // return i;
-  });
