@@ -1,8 +1,30 @@
+*{
+    perspective: 800px;
+}
+
 #container{
+    /* background-color:red; */
     display: flex;
     justify-content: center;
     width: 100%;
+   
 }
+
+#back{
+    position: absolute;
+    margin-top: 120px;
+    margin-left: -90px;
+ width: 160px;
+ height: 160px;
+    background-image: url('cat.jpg');
+    background-repeat: no-repeat;
+background-position-x: center;
+background-position-y: center;
+
+border-radius: 50%;
+z-index: -1;
+}
+
 #textbox{
     border: 1px solid rgba(0, 0, 255, 0.808);
     background-color: blueviolet;

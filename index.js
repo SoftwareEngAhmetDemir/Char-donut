@@ -1,7 +1,7 @@
 
 var data = [10, 50, 80, 90, 60];
 data  = data.sort()
-var r = 70;
+var r = 80;
 var color = d3
   .scaleOrdinal()
   .range(["red", "blue", "orange", "yellow", "green"]);
