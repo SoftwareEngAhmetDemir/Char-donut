@@ -1,6 +1,7 @@
 #container{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 #textbox{
     border: 1px solid rgba(0, 0, 255, 0.808);

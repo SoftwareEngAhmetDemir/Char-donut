@@ -1,19 +1,20 @@
+
 var data = [10, 50, 80, 90, 60];
 data  = data.sort()
-var r = 150;
+var r = 70;
 var color = d3
   .scaleOrdinal()
   .range(["red", "blue", "orange", "yellow", "green"]);
 var canvas = d3
   .select("#container")
   .append("svg")
-  .attr("width", 500)
-  .attr("height", 500)
+  .attr("width", 300)
+  .attr("height", 300)
 
   
-var group = canvas.append("g").attr("transform", "translate(300,300)");
+var group = canvas.append("g").attr("transform", "translate(105,200)");
 
-var arc = d3.arc().innerRadius(200).outerRadius(r);
+var arc = d3.arc().innerRadius(100).outerRadius(r);
 
 var pie = d3.pie().value(function (d) {
   return d;
